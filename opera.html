@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversiones</title>
+    <link rel="stylesheet" href="opera.css">
+</head>
+<body>
+    <!--Densidad de Trafico-->
+    <section class="container-data">
+        <form action="" method="POST" name="form">
+            <div class="form">
+                <h1>Densidad de Trafico</h1>
+                <div class="grupo">
+                    <input type="number" id="mu"><span class="barra"></span>
+                    <label for="">µ</label>
+                </div>
+                <div class="grupo">
+                    <input type="number" id="lambda"><span class="barra"></span>
+                    <label for="">λ</label>
+                </div>
+                <input type="button" value="Obtener Densidad de Trafico" onclick=conv() class="button">
+                <p class="warnings"></p>
+            </div>
+        </form>
+    </section>
+
+    <!--Eficiencia del Sistema-->
+    <section class="container-data">
+        <form action="" method="POST" name="form">
+            <div class="form">
+                <h1>Eficiencia del Sistema</h1>
+                <div class="grupo">
+                    <input type="number" id="dt" placeholder="No Ingresar Nada!"><span class="barra"></span>
+                    <label for="">p</label>
+                </div>
+                <div class="grupo">
+                    <input type="number" id="porct"><span class="barra"></span>
+                    <label for="">Ingrese el Porcentaje</label>
+                </div>
+                <input type="button" value="Obtener Eficiencia" onclick=eficiencia() class="button">
+                <p class="warnings"></p>
+            </div>
+        </form>
+    </section>
+
+    <!--Sistema Ocioso-->
+    <section class="container-data">
+        <form action="" method="POST" name="form">
+            <div class="form">
+                <h1>Sistema Ocioso</h1>
+                <div class="grupo">
+                    <input type="number" id="num1"><span class="barra"></span>
+                    <label for="">Ingrese el Digito</label>
+                </div>
+                <div class="grupo">
+                    <input type="number" id="trabj" placeholder="No Ingresar Nada!"><span class="barra"></span>
+                    <label for="">p</label>
+                </div>
+                <input type="button" value="Obtener Sistema Ocioso" onclick=ocioso() class="button">
+                <p class="warnings"></p>
+            </div>
+        </form>
+    </section>
+
+    <!--Tiempo Promedio en el Sistema-->
+    <section class="container-data">
+        <form action="" method="POST" name="form">
+            <div class="form">
+                <h1>Tiempo Promedio Sistema</h1>
+                <div class="grupo">
+                    <input type="number" id="dgt1"><span class="barra"></span>
+                    <label for="">Ingrese el Digito</label>
+                </div>
+                <div class="grupo">
+                    <input type="number" id="dgt2"><span class="barra"></span>
+                    <label for="">Ingrese valor µ</label>
+                </div>
+                <div class="grupo">
+                    <input type="number" id="notocar" placeholder="No Ingresar Nada!"><span class="barra"></span>
+                    <label for="">p</label>
+                </div>
+                <input type="button" value="Obtener Promedio Sistema" onclick=promediosistema() class="button">
+                <p class="warnings"></p>
+            </div>
+        </form>
+    </section>
+
+    <!--Tiempo Promedio en la cola-->
+    <section class="container-data">
+        <form action="" method="POST" name="form">
+            <div class="form">
+                <h1>Tiempo Promedio Cola</h1>
+                <div class="grupo">
+                    <input type="number" id="p1"><span class="barra"></span>
+                    <label for="">Ingrese Valor p</label>
+                </div>
+                <div class="grupo">
+                    <input type="number" id="p2"><span class="barra"></span>
+                    <label for="">Ingrese valor µ</label>
+                </div>
+                <div class="grupo">
+                    <input type="number" id="notocar" placeholder="No Ingresar Nada!"><span class="barra"></span>
+                    <label for="">(1 - p)</label>
+                </div>
+                <input type="button" value="Obtener Promedio Cola" onclick=promediocola() class="button">
+                <p class="warnings"></p>
+            </div>
+        </form>
+    </section>
+
+    <!--Cantidad de Clientes en el Sistema-->
+    <section class="container-data">
+        <form action="" method="POST" name="form">
+            <div class="form">
+                <h1>Cantidad Clientes Sistema</h1>
+                <div class="grupo">
+                    <input type="number" id="w1"><span class="barra"></span>
+                    <label for="">Ingrese Valor p</label>
+                </div>
+                <div class="grupo">
+                    <input type="number" id="notocar" placeholder="No Ingresar Nada!"><span class="barra"></span>
+                    <label for="">(1 - p)</label>
+                </div>
+                <input type="button" value="Obtener Cantidad Cliente Sistema" onclick=cantcltssistema() class="button">
+                <p class="warnings"></p>
+            </div>
+        </form>
+    </section>
+
+    <!--Cantidad de Clientes en la Cola-->
+    <section class="container-data">
+        <form action="" method="POST" name="form">
+            <div class="form">
+                <h1>Cantidad Clientes Cola</h1>
+                <div class="grupo">
+                    <input type="number" id="vp1"><span class="barra"></span>
+                    <label for="">Ingrese Valor p</label>
+                </div>
+                <div class="grupo">
+                    <input type="number" id="notocar" placeholder="No Ingresar Nada!"><span class="barra"></span>
+                    <label for="">(1 - p)</label>
+                </div>
+                <input type="button" value="Obtener Cantidad Cliente Cola" onclick=cantcltscola() class="button">
+                <p class="warnings"></p>
+            </div>
+        </form>
+    </section>
+
+    <!--Probabilidades de Ocurrencia de un Evento-->
+    <section class="container-data">
+        <form action="" method="POST" name="form">
+            <div class="form">
+                <h1>Probabilidades de Ocurrencia</h1>
+                <div class="grupo">
+                    <input type="number" id="pb1"><span class="barra"></span>
+                    <label for="">Ingrese Valor p</label>
+                </div>
+                <div class="grupo">
+                    <input type="number" id="notocar" placeholder="No Ingresar Nada!"><span class="barra"></span>
+                    <label for="">(1 - p)</label>
+                </div>
+                <input type="button" value="Obtener Probabilidad" onclick=probabilidades() class="button">
+                <p class="warnings"></p>
+            </div>
+        </form>
+    </section>
+</body>
+<script src="opera.js"></script>
+</html>
